@@ -1,0 +1,264 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,500;1,600;1,700&display=swap');
+* , *::after , *::before{
+  box-sizing: border-box;
+  margin: 0 ;
+  padding: 0;
+  
+  transition: all 500ms ease ;
+}
+body{
+  min-height: 100vh;
+  min-width: 100vw;
+overflow-x: hidden;
+  
+  background-color: #181824;
+
+  background-image: url(./images/bg-desktop-dark.jpg);
+  background-size: contain;
+  background-position: center 0;
+  background-repeat: no-repeat;
+
+  transition: all 500ms ease;
+}
+.light-body{
+  background-color: #e9e3e3;
+  background-image: url(./images/bg-desktop-light.jpg);
+}
+.wrap{
+  width: 500px;
+  margin: 5rem auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  // box-shadow: 0 4px 3px 2px rgba(0, 0, 0, 0.1);
+}
+.naslov{
+width: 100%;
+
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h1{
+    color: rgb(211, 207, 207);
+  }
+   i {
+    color: rgb(211, 207, 207);
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+}
+#input{
+  margin-top: 3rem;
+  width: 500px;
+  font-size: 1rem;
+  padding: 1rem 3rem;
+
+  color: rgb(211, 207, 207);
+  background-color: #25273C;
+
+  border: none;
+  outline: none;
+}
+#input::placeholder{
+  color: #a2a4b1;
+}
+ .light-input{
+  color: rgb(117, 116, 116) !important;
+  background-color: #ffffff !important;
+    // border-bottom: 3px solid #F2F2F4 !important;
+ }
+.todo-wrap{
+margin-top: 1.5rem;
+}
+
+.todo-btn-x{
+  position: relative;
+// display: flex;
+// align-items: center;
+// justify-content: space-between;
+height: 51px;
+width: 500px;
+  font-size: 1rem;
+  padding: 1rem 3rem;
+
+  color: rgb(211, 207, 207);
+background-color: #25273C;
+  border-bottom: 3px solid #2E3045;
+}
+.todo-btn-x-light{
+  color: rgb(117, 116, 116);
+background-color: #ffffff;
+  border-bottom: 3px solid #F2F2F4;
+}
+.check , .btn{
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%);
+}
+.check{
+  left: 1rem;
+}
+.btn{
+  display: none;
+  right: 2rem;
+
+  //styles
+  background-color: transparent;
+  border: none ;
+  font-size: 1.5rem;
+  color: rgb(167, 167, 167);
+  padding: 0.5rem;
+  cursor: pointer;
+  // transition: display 1000ms;
+}
+.todo-btn-x:hover .btn{
+  display: block;
+}
+// .btn:hover{
+//  background-color: rgb(173, 135, 135);
+// }
+
+.counter{
+  padding: 0 1rem;
+  height: 30px;
+  width: 500px;
+
+  user-select: none;
+
+  background-color: #25273C;
+color: rgb(185, 184, 184);
+
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(117, 116, 116);
+}
+.counter-light{
+  
+background-color: #ffffff;
+}
+.counter-show{
+  display: flex;
+}
+.counter ul{
+  list-style-type: none;
+  display: flex;
+  
+}
+.counter ul li{
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+#clear{
+  cursor: pointer;
+}
+// .change-color{
+//   color: blue  !important;
+// }
+.complete{
+  text-decoration: line-through;
+  p{
+    opacity: 0.5;
+  }
+  
+}
+
+.check{
+background-color: #25273C;
+border: 3px solid #2E3045;
+
+  width: 1.4rem;
+  height: 1.4rem;
+  
+  outline: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  i{
+    pointer-events: none;
+  }
+}
+.check-light{
+  background-color: #ffffff !important;
+border: 3px solid #F2F2F4 !important;
+i{
+  pointer-events: none !important;
+}
+}
+
+.gradient{
+  background-image: linear-gradient(hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
+  i{
+    color: white;
+    font-size: 0.6rem;
+    pointer-events: none;
+  }
+}
+
+.un-show{
+  display: none;
+}
+
+.blue{
+  color: #2057d6;
+}
+
+#all ,
+ #act ,
+  #co ,
+   #clear ,
+   #items-count{
+transition: all 400ms ease;
+opacity: 0.6;
+}
+
+#all:hover,
+#act:hover,
+#co:hover,
+#clear:hover{
+opacity: 1;
+}
+
+@media screen and (max-width: 800px){
+  body{
+    // background-image: url(./images/bg-mobile-dark.jpg);
+    background-image: url(./images/bg-desktop-dark.jpg);
+  background-size: 1400px;
+  background-position: center 0;
+  background-repeat: no-repeat;
+  }
+  .wrap{
+    width: 320px;
+    margin: 4rem auto;
+  }
+  #input{
+    margin-top: 4rem;
+    width: 320px;
+  }
+  .todo-btn-x{
+    width: 320px;
+  }
+  .counter{
+    width: 320px;
+    justify-content: center;
+  }
+#items-count,
+  #clear{
+    display: none;
+  }
+
+  .counter ul li{
+    margin: 0 1.5rem;
+    cursor: pointer;
+  }
+  .btn{
+   display: block;
+   opacity: 0.5;
+  }
+}
